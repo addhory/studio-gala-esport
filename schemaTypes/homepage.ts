@@ -36,6 +36,12 @@ export const homepage = defineType({
                   type: 'string',
                   title: 'Alternative Text',
                 },
+                {
+                  name: 'label',
+                  type: 'string',
+                  title: 'Slide Label',
+                  initialValue: 'GALA LOCATION',
+                },
               ],
             },
           ],
@@ -105,7 +111,20 @@ export const homepage = defineType({
               type: 'object',
               fields: [
                 {name: 'text', type: 'string', title: 'Text'},
-                // Could add icon selector here if needed, but keeping simple for now
+                {
+                  name: 'iconName',
+                  type: 'string',
+                  title: 'Icon Name',
+                  description: 'Lucide Icon name (e.g. Headset, UserStar, PcCase)',
+                  initialValue: 'Headset',
+                },
+                {
+                  name: 'dotColor',
+                  type: 'string',
+                  title: 'Dot Color',
+                  description: 'Hex color code for the separator dot (e.g. #9333ea)',
+                  initialValue: '#9333ea',
+                },
               ],
               preview: {
                 select: {title: 'text'},
